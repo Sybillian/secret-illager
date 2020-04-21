@@ -1,0 +1,171 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {"selector":"@s","italic":"false"},
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"translate":"syb.lore.head.vote.1","italic":"false","with":[{"selector":"@s","italic":"false"}]},
+                {"text":" "},
+                {"translate":"syb.lore.head.vote.2","italic":"false"}
+              ],
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:1s}",
+              "entity": "this",
+              "conditions":[{
+                "condition": "minecraft:entity_scores",
+                "scores": {
+                  "id": 1
+                },
+                "entity": "this"
+              }]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:2s}",
+              "entity": "this",
+              "conditions":[{
+                "condition": "minecraft:entity_scores",
+                "scores": {
+                  "id": 2
+                },
+                "entity": "this"
+              }]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:3s}",
+              "entity": "this",
+              "conditions":[{
+                "condition": "minecraft:entity_scores",
+                "scores": {
+                  "id": 3
+                },
+                "entity": "this"
+              }]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:4s}",
+              "entity": "this",
+              "conditions":[{
+                "condition": "minecraft:entity_scores",
+                "scores": {
+                  "id": 4
+                },
+                "entity": "this"
+              }]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:5s}",
+              "entity": "this",
+              "conditions":[{
+                "condition": "minecraft:entity_scores",
+                "scores": {
+                  "id": 5
+                },
+                "entity": "this"
+              }]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:6s}",
+              "entity": "this",
+              "conditions":[{
+                "condition": "minecraft:entity_scores",
+                "scores": {
+                  "id": 6
+                },
+                "entity": "this"
+              }]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:7s}",
+              "entity": "this",
+              "conditions":[{
+                "condition": "minecraft:entity_scores",
+                "scores": {
+                  "id": 7
+                },
+                "entity": "this"
+              }]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:8s}",
+              "entity": "this",
+              "conditions":[{
+                "condition": "minecraft:entity_scores",
+                "scores": {
+                  "id": 8
+                },
+                "entity": "this"
+              }]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:9s}",
+              "entity": "this",
+              "conditions":[{
+                "condition": "minecraft:entity_scores",
+                "scores": {
+                  "id": 9
+                },
+                "entity": "this"
+              }]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:10s}",
+              "entity": "this",
+              "conditions":[{
+                "condition": "minecraft:entity_scores",
+                "scores": {
+                  "id": 10
+                },
+                "entity": "this"
+              }]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:11s}",
+              "entity": "this",
+              "conditions":[{
+                "condition": "minecraft:entity_scores",
+                "scores": {
+                  "id": 11
+                },
+                "entity": "this"
+              }]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

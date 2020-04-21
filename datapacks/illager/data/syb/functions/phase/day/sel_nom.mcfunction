@@ -1,0 +1,12 @@
+tag @s remove nominating
+execute if score @s nom_id matches 1 run tellraw @a [{"translate":"syb.chat.nomination.set","with":[{"selector":"@s"},{"selector":"@a[scores={id=1}]"}]}]
+execute if score @s nom_id matches 2 run tellraw @a [{"translate":"syb.chat.nomination.set","with":[{"selector":"@s"},{"selector":"@a[scores={id=2}]"}]}]
+execute if score @s nom_id matches 3 run tellraw @a [{"translate":"syb.chat.nomination.set","with":[{"selector":"@s"},{"selector":"@a[scores={id=3}]"}]}]
+execute if score @s nom_id matches 4 run tellraw @a [{"translate":"syb.chat.nomination.set","with":[{"selector":"@s"},{"selector":"@a[scores={id=4}]"}]}]
+execute if score @s nom_id matches 5 run tellraw @a [{"translate":"syb.chat.nomination.set","with":[{"selector":"@s"},{"selector":"@a[scores={id=5}]"}]}]
+execute if score @s nom_id matches 6 run tellraw @a [{"translate":"syb.chat.nomination.set","with":[{"selector":"@s"},{"selector":"@a[scores={id=6}]"}]}]
+execute if score @s nom_id matches 7 run tellraw @a [{"translate":"syb.chat.nomination.set","with":[{"selector":"@s"},{"selector":"@a[scores={id=7}]"}]}]
+execute if score @s nom_id matches 8 run tellraw @a [{"translate":"syb.chat.nomination.set","with":[{"selector":"@s"},{"selector":"@a[scores={id=8}]"}]}]
+execute if score @s nom_id matches 9 run tellraw @a [{"translate":"syb.chat.nomination.set","with":[{"selector":"@s"},{"selector":"@a[scores={id=9}]"}]}]
+execute if score @s nom_id matches 10 run tellraw @a [{"translate":"syb.chat.nomination.set","with":[{"selector":"@s"},{"selector":"@a[scores={id=10}]"}]}]
+execute if score @s nom_id matches 11 run tellraw @a [{"translate":"syb.chat.nomination.set","with":[{"selector":"@s"},{"selector":"@a[scores={id=11}]"}]}]

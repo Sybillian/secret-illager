@@ -1,0 +1,42 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:carrot_on_a_stick",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {"translate": "syb.item.team.illager"}
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"translate":"syb.lore.team.illager.1","italic":"false","with":[{"selector":"@a[tag=illager,sort=nearest]","italic":"false"},{"selector":"@a[tag=illager,sort=furthest]","italic":"false"}]},
+                {"translate":"syb.lore.team.illager.2","italic":"false"},
+                {"text":" "},
+                {"translate":"syb.lore.team.illager.3","italic":"false"},
+                {"translate":"syb.lore.team.illager.4","italic":"false"},
+                {"translate":"syb.lore.team.illager.5","italic":"false"},
+                {"translate":"syb.lore.team.illager.6","italic":"false"},
+                {"translate":"syb.lore.team.illager.7","italic":"false"}
+              ],
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:5}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
