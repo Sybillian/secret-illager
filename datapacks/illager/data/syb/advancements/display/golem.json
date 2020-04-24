@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": [
+      {"translate": "syb.advancement.name.golem"}
+    ],
+    "description": [
+      {"translate": "syb.advancement.desc.golem"}
+    ],
+    "icon": {
+      "item": "minecraft:carrot_on_a_stick",
+      "nbt": "{CustomModelData:3}"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "syb:display/nitwit",
+  "criteria": {
+    "firstjoin": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}
