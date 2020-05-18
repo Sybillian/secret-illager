@@ -1,8 +1,8 @@
 # status
-# 1 = choosing nom
-# 2 = chosen nom, waiting for others
+# 1 = choosing vote
+# 2 = vote tied - secondary vote
 # 3 = voting
-# 4 = cast vote, waiting for others
+# 4 = 
 
-execute as @a[scores={reset_me=1}] run function
-execute as @a[scores={status=1}] run function syb:loop/game/nominating
+execute if score phase game_data matches 1 run function syb:loop/game/voting
+# execute as @a[scores={reset_me=1}] run function
