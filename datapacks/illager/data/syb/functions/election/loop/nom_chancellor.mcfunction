@@ -1,0 +1,2 @@
+execute store result score nom_chancellor game_data run data get entity @e[type=minecraft:item,limit=1] Item.tag.player_id
+execute if score nom_chancellor game_data matches 1.. run function syb:election/trigger/selected_chancellor

@@ -43,31 +43,32 @@ scoreboard objectives add used_coas minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add math dummy
 scoreboard objectives add settings dummy
 scoreboard objectives add game_data dummy
-scoreboard objectives add id dummy
-scoreboard objectives add status dummy
-scoreboard objectives add nom_id dummy
-scoreboard objectives add alive dummy
 scoreboard objectives add reset_me dummy
+scoreboard objectives add id dummy
+scoreboard objectives add nom_vote dummy
 
 scoreboard players set 100000 math 100000
 scoreboard players set 10000 math 10000
+scoreboard players set 1200 math 1200
 scoreboard players set 1000 math 1000
 scoreboard players set 100 math 100
+scoreboard players set 20 math 20
 scoreboard players set 10 math 10
 
-scoreboard players set active game_data 0
-scoreboard players set phase game_data 0
-scoreboard players set day game_data 0
+scoreboard players set game_active game_data 0
+scoreboard players set policies_f game_data 0
+scoreboard players set policies_l game_data 0
+scoreboard players set fails game_data 0
+scoreboard players set phase_time game_data 0
 scoreboard players set players game_data 0
-scoreboard players set living game_data 0
-scoreboard players set dead game_data 0
-scoreboard players set illagers game_data 0
-scoreboard players set civilians game_data 0
-scoreboard players set golem_alive game_data 0
-scoreboard players set cleric_alive game_data 0
+scoreboard players set living_players game_data 0
+scoreboard players set phase game_data 0
+scoreboard players set action game_data 0
+scoreboard players set nom_chancellor game_data 0
+scoreboard players set no_votes game_data 0
+scoreboard players set yes_votes game_data 0
 
-scoreboard players set day_dur settings 2400
-scoreboard players set night_dur settings 2400
+scoreboard players set nom_dur settings 2400
 
 ## Teams
 team add living {"translate": "syb.team.name.living"}
@@ -88,18 +89,14 @@ team modify spec prefix {"text":"[SPEC] ","color":"gray"}
 team add lobby {"translate": "syb.team.name.lobby"}
 team modify lobby color white
 
-team remove red
-team remove green
-team remove blue
-team remove pink
-
 ## Bossbars
-bossbar add syb:timer_day {"translate":"syb.bossbar.timer_day","color":"yellow"}
-bossbar add syb:timer_night {"translate":"syb.bossbar.timer_night","color":"dark_purple"}
-execute store result bossbar syb:timer_day max run scoreboard players get day_dur settings
-execute store result bossbar syb:timer_night max run scoreboard players get night_dur settings
-bossbar set syb:timer_day color yellow
-bossbar set syb:timer_night color purple
+bossbar add syb:vote_nom {"translate":"syb.bossbar.vote_nom","color":"dark_aqua"}
+bossbar set syb:vote_nom color blue
+execute store result bossbar syb:vote_nom max run scoreboard players get nom_dur settings
+
+# bossbar add syb:timer_night {"translate":"syb.bossbar.timer_night","color":"dark_purple"}
+# bossbar set syb:timer_night color purple
+# execute store result bossbar syb:timer_night max run scoreboard players get night_dur settings
 
 
 ## DEV STUFF

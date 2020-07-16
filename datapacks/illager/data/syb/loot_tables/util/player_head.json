@@ -7,7 +7,398 @@
           "type": "item",
           "name": "minecraft:player_head",
           "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores":{
+                "id": 1
+              }
+            }
+          ],
           "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:1}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {"selector":"@s","italic":"false"},
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"translate":"syb.lore.head.vote.1","italic":"false","with":[{"selector":"@s","italic":"false"}]},
+                {"text":" "},
+                {"translate":"syb.lore.head.vote.2","italic":"false"}
+              ],
+              "entity": "this"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores":{
+                "id": 2
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:2}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {"selector":"@s","italic":"false"},
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"translate":"syb.lore.head.vote.1","italic":"false","with":[{"selector":"@s","italic":"false"}]},
+                {"text":" "},
+                {"translate":"syb.lore.head.vote.2","italic":"false"}
+              ],
+              "entity": "this"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores":{
+                "id": 3
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:3}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {"selector":"@s","italic":"false"},
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"translate":"syb.lore.head.vote.1","italic":"false","with":[{"selector":"@s","italic":"false"}]},
+                {"text":" "},
+                {"translate":"syb.lore.head.vote.2","italic":"false"}
+              ],
+              "entity": "this"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores":{
+                "id": 4
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:4}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {"selector":"@s","italic":"false"},
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"translate":"syb.lore.head.vote.1","italic":"false","with":[{"selector":"@s","italic":"false"}]},
+                {"text":" "},
+                {"translate":"syb.lore.head.vote.2","italic":"false"}
+              ],
+              "entity": "this"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores":{
+                "id": 5
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:5}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {"selector":"@s","italic":"false"},
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"translate":"syb.lore.head.vote.1","italic":"false","with":[{"selector":"@s","italic":"false"}]},
+                {"text":" "},
+                {"translate":"syb.lore.head.vote.2","italic":"false"}
+              ],
+              "entity": "this"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores":{
+                "id": 6
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:6}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {"selector":"@s","italic":"false"},
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"translate":"syb.lore.head.vote.1","italic":"false","with":[{"selector":"@s","italic":"false"}]},
+                {"text":" "},
+                {"translate":"syb.lore.head.vote.2","italic":"false"}
+              ],
+              "entity": "this"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores":{
+                "id": 7
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:7}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {"selector":"@s","italic":"false"},
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"translate":"syb.lore.head.vote.1","italic":"false","with":[{"selector":"@s","italic":"false"}]},
+                {"text":" "},
+                {"translate":"syb.lore.head.vote.2","italic":"false"}
+              ],
+              "entity": "this"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores":{
+                "id": 8
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:8}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {"selector":"@s","italic":"false"},
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"translate":"syb.lore.head.vote.1","italic":"false","with":[{"selector":"@s","italic":"false"}]},
+                {"text":" "},
+                {"translate":"syb.lore.head.vote.2","italic":"false"}
+              ],
+              "entity": "this"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores":{
+                "id": 9
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:9}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {"selector":"@s","italic":"false"},
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"translate":"syb.lore.head.vote.1","italic":"false","with":[{"selector":"@s","italic":"false"}]},
+                {"text":" "},
+                {"translate":"syb.lore.head.vote.2","italic":"false"}
+              ],
+              "entity": "this"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores":{
+                "id": 10
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{player_id:10}"
+            },
             {
               "function": "minecraft:set_count",
               "count": 1
