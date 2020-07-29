@@ -1,4 +1,4 @@
-tellraw @a [{"text":"The vote passed with "},{"score":{"name":"yes_votes","objective":"game_data"}},{"text":" votes in favor and "},{"score":{"name":"no_votes","objective":"game_data"}},{"text":" votes against."}]
+tellraw @a [{"translate":"syb.chat.chancellor_passed","with":[{"score":{"name":"yes_votes","objective":"game_data"}},{"score":{"name":"no_votes","objective":"game_data"}}]}]
 scoreboard players set phase game_data 2
 scoreboard players set action game_data 0
 

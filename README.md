@@ -4,7 +4,7 @@ A Minecraft recreation of Secret Hitler. This document is heavily WIP.
 
 ## Game Progression:
 ### Setup
-
+  * 
 
 ### Round
 1. Election
@@ -18,8 +18,4 @@ A Minecraft recreation of Secret Hitler. This document is heavily WIP.
   * President selects 2 policy cards to hand to the Chancellor.
   * Chancellor selects 1 policy card to play.
 3. Executive Action
-<<<<<<< HEAD
   * If a Fascist policy is played, check if it triggers a Presidential Power.
-=======
-  * If a Fascist policy is played, check if it triggers a Presidential Power.
->>>>>>> 88af2f24daac8ec5640117257411a109cafac198

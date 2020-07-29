@@ -46,6 +46,8 @@ scoreboard objectives add game_data dummy
 scoreboard objectives add reset_me dummy
 scoreboard objectives add id dummy
 scoreboard objectives add nom_vote dummy
+scoreboard objectives add role dummy
+scoreboard objectives add display dummy {"translate": "syb.scoreboard.title"}
 
 scoreboard players set 100000 math 100000
 scoreboard players set 10000 math 10000
@@ -70,6 +72,52 @@ scoreboard players set yes_votes game_data 0
 
 scoreboard players set nom_dur settings 2400
 
+## Display
+team add display_10
+team add display_9
+team add display_8
+team add display_7
+team add display_6
+team add display_5
+team add display_4
+team add display_3
+team add display_2
+team add display_1
+team add display_0
+team join display_10 §r§r§r§r§r§r§r§r§r§r§r
+team join display_9 §r§r§r§r§r§r§r§r§r§r
+team join display_8 §r§r§r§r§r§r§r§r§r
+team join display_7 §r§r§r§r§r§r§r§r
+team join display_6 §r§r§r§r§r§r§r
+team join display_5 §r§r§r§r§r§r
+team join display_4 §r§r§r§r§r
+team join display_3 §r§r§r§r
+team join display_2 §r§r§r
+team join display_1 §r§r
+team join display_0 §r
+scoreboard players reset §r§r§r§r§r§r§r§r§r§r§r display
+scoreboard players reset §r§r§r§r§r§r§r§r§r§r display
+scoreboard players reset §r§r§r§r§r§r§r§r§r display
+scoreboard players reset §r§r§r§r§r§r§r§r display
+scoreboard players set §r§r§r§r§r§r§r display 6
+scoreboard players set §r§r§r§r§r§r display 5
+scoreboard players set §r§r§r§r§r display 4
+scoreboard players set §r§r§r§r display 3
+scoreboard players set §r§r§r display 2
+scoreboard players set §r§r display 1
+scoreboard players set §r display 0
+team modify display_10 prefix ""
+team modify display_9 prefix ""
+team modify display_8 prefix ""
+team modify display_7 prefix ""
+team modify display_6 prefix ""
+team modify display_5 prefix {"translate":"syb.scoreboard.villager.0"}
+team modify display_4 prefix {"translate":"syb.scoreboard.illager.0"}
+team modify display_3 prefix ""
+team modify display_2 prefix {"translate":"syb.scoreboard.event.0"}
+team modify display_1 prefix {"translate":"syb.scoreboard.phase.0"}
+team modify display_0 prefix ""
+
 ## Teams
 team add living {"translate": "syb.team.name.living"}
 team modify living color yellow
@@ -80,11 +128,11 @@ team modify living collisionRule never
 
 team add dead {"translate": "syb.team.name.dead"}
 team modify dead color gray
-team modify dead prefix "☠ "
+team modify dead prefix {"translate":"syb.team.prefix.dead","color":"gray"}
 
 team add spec {"translate": "syb.team.name.spec"}
 team modify spec color dark_gray
-team modify spec prefix {"text":"[SPEC] ","color":"gray"}
+team modify spec prefix {"translate":"syb.team.prefix.spec","color":"gray"}
 
 team add lobby {"translate": "syb.team.name.lobby"}
 team modify lobby color white
