@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [{
+        "type": "minecraft:item",
+        "name": "minecraft:carrot_on_a_stick",
+        "functions": [{
+          "function": "minecraft:set_count",
+          "count": 6  
+        },
+        {
+          "function": "minecraft:set_name",
+          "name": {"translate":"syb.item.name.villager_policy"}
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [{"translate":"syb.item.lore.villager_policy"}]
+        },
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{CustomModelData:2,policy:0}"
+        }]
+      }]
+    },
+    {
+      "rolls": 1,
+      "entries": [{
+        "type": "minecraft:item",
+        "name": "minecraft:carrot_on_a_stick",
+        "functions": [{
+          "function": "minecraft:set_count",
+          "count": 11  
+        },
+        {
+          "function": "minecraft:set_name",
+          "name": {"translate":"syb.item.name.illager_policy"}
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [{"translate":"syb.item.lore.illager_policy"}]
+        },
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{CustomModelData:3,policy:1}"
+        }]
+      }]
+    }
+  ]
+}

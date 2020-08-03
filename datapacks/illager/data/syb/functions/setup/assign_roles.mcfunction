@@ -47,3 +47,6 @@ execute if score players game_data matches 7 run tellraw @a [{"translate":"syb.c
 execute if score players game_data matches 8 run tellraw @a [{"translate":"syb.chat.turn_order.8","with":[{"selector":"@a[scores={id=1}]"},{"selector":"@a[scores={id=2}]"},{"selector":"@a[scores={id=3}]"},{"selector":"@a[scores={id=4}]"},{"selector":"@a[scores={id=5}]"},{"selector":"@a[scores={id=6}]"},{"selector":"@a[scores={id=7}]"},{"selector":"@a[scores={id=8}]"}]}]
 execute if score players game_data matches 9 run tellraw @a [{"translate":"syb.chat.turn_order.9","with":[{"selector":"@a[scores={id=1}]"},{"selector":"@a[scores={id=2}]"},{"selector":"@a[scores={id=3}]"},{"selector":"@a[scores={id=4}]"},{"selector":"@a[scores={id=5}]"},{"selector":"@a[scores={id=6}]"},{"selector":"@a[scores={id=7}]"},{"selector":"@a[scores={id=8}]"},{"selector":"@a[scores={id=9}]"}]}]
 execute if score players game_data matches 10 run tellraw @a [{"translate":"syb.chat.turn_order.10","with":[{"selector":"@a[scores={id=1}]"},{"selector":"@a[scores={id=2}]"},{"selector":"@a[scores={id=3}]"},{"selector":"@a[scores={id=4}]"},{"selector":"@a[scores={id=5}]"},{"selector":"@a[scores={id=6}]"},{"selector":"@a[scores={id=7}]"},{"selector":"@a[scores={id=8}]"},{"selector":"@a[scores={id=9}]"},{"selector":"@a[scores={id=10}]"}]}]
+
+# Deck build
+# loot spawn 0 5 0 loot syb:util/deck

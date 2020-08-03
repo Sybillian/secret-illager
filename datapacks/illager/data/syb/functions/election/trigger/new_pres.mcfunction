@@ -6,3 +6,5 @@ execute if entity @a[tag=pres] run tellraw @a [{"translate":"syb.chat.new_pres",
 execute if entity @a[tag=pres] run schedule function syb:election/trigger/nom_chancellor 2s
 execute unless entity @a[tag=pres] run tellraw @a [{"translate":"syb.chat.pres_offline"}]
 execute unless entity @a[tag=pres] run schedule function syb:election/trigger/new_pres 2s
+
+team modify display_1 prefix {"translate":"syb.scoreboard.phase.0","color":"red"}

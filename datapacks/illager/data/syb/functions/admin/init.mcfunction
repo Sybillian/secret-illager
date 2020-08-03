@@ -47,7 +47,7 @@ scoreboard objectives add reset_me dummy
 scoreboard objectives add id dummy
 scoreboard objectives add nom_vote dummy
 scoreboard objectives add role dummy
-scoreboard objectives add display dummy {"translate": "syb.scoreboard.title"}
+scoreboard objectives add display dummy {"translate": "syb.scoreboard.title","color":"dark_red","bold":"true"}
 
 scoreboard players set 100000 math 100000
 scoreboard players set 10000 math 10000
@@ -58,8 +58,8 @@ scoreboard players set 20 math 20
 scoreboard players set 10 math 10
 
 scoreboard players set game_active game_data 0
-scoreboard players set policies_f game_data 0
-scoreboard players set policies_l game_data 0
+scoreboard players set policies_i game_data 0
+scoreboard players set policies_v game_data 0
 scoreboard players set fails game_data 0
 scoreboard players set phase_time game_data 0
 scoreboard players set players game_data 0
@@ -69,6 +69,8 @@ scoreboard players set action game_data 0
 scoreboard players set nom_chancellor game_data 0
 scoreboard players set no_votes game_data 0
 scoreboard players set yes_votes game_data 0
+scoreboard players set v_policies_inhand game_data 0
+scoreboard players set i_policies_inhand game_data 0
 
 scoreboard players set nom_dur settings 2400
 
@@ -111,11 +113,11 @@ team modify display_9 prefix ""
 team modify display_8 prefix ""
 team modify display_7 prefix ""
 team modify display_6 prefix ""
-team modify display_5 prefix {"translate":"syb.scoreboard.villager.0"}
-team modify display_4 prefix {"translate":"syb.scoreboard.illager.0"}
+team modify display_5 prefix {"translate":"syb.scoreboard.villager.0","color":"green"}
+team modify display_4 prefix {"translate":"syb.scoreboard.illager.0","color":"red"}
 team modify display_3 prefix ""
-team modify display_2 prefix {"translate":"syb.scoreboard.event.0"}
-team modify display_1 prefix {"translate":"syb.scoreboard.phase.0"}
+team modify display_2 prefix {"translate":"syb.scoreboard.event.0","color":"red"}
+team modify display_1 prefix {"translate":"syb.scoreboard.phase.0","color":"red"}
 team modify display_0 prefix ""
 
 ## Teams
