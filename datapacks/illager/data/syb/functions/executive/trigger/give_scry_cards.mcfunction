@@ -1,5 +1,6 @@
 tellraw @a[tag=!pres] {"translate":"syb.chat.scry.draw.others","with":[{"selector":"@a[tag=pres]"}]}
 tellraw @a[tag=pres] {"translate":"syb.chat.scry.draw.pres"}
+scoreboard players operation phase_time game_data = scry_dur game_data
 execute if data storage game:deck Cards[0].tag{policy:0} run give @a[tag=pres] minecraft:carrot_on_a_stick{CustomModelData:2,policy:0,display:{Name:'{"translate":"syb.item.name.villager_policy"}',Lore:['{"translate":"syb.item.lore.villager_policy"}']}}
 execute if data storage game:deck Cards[0].tag{policy:1} run give @a[tag=pres] minecraft:carrot_on_a_stick{CustomModelData:3,policy:1,display:{Name:'{"translate":"syb.item.name.illager_policy"}',Lore:['{"translate":"syb.item.lore.illager_policy"}']}}
 execute if data storage game:deck Cards[1].tag{policy:0} run give @a[tag=pres] minecraft:carrot_on_a_stick{CustomModelData:2,policy:0,display:{Name:'{"translate":"syb.item.name.villager_policy"}',Lore:['{"translate":"syb.item.lore.villager_policy"}']}}

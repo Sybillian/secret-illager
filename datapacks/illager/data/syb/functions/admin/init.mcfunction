@@ -73,6 +73,10 @@ scoreboard players set v_policies_inhand game_data 0
 scoreboard players set i_policies_inhand game_data 0
 
 scoreboard players set nom_dur settings 2400
+scoreboard players set scry_dur settings 2400
+scoreboard plaeyrs set investigate_dur settings 2400
+scoreboard plaeyrs set pick_pres_dur settings 2400
+scoreboard plaeyrs set elim_dur settings 2400
 
 ## Display
 team add display_10
@@ -144,10 +148,21 @@ bossbar add syb:vote_nom {"translate":"syb.bossbar.vote_nom","color":"dark_aqua"
 bossbar set syb:vote_nom color blue
 execute store result bossbar syb:vote_nom max run scoreboard players get nom_dur settings
 
-# bossbar add syb:timer_night {"translate":"syb.bossbar.timer_night","color":"dark_purple"}
-# bossbar set syb:timer_night color purple
-# execute store result bossbar syb:timer_night max run scoreboard players get night_dur settings
+bossbar add syb:scry {"translate":"syb.bossbar.scry","color":"green"}
+bossbar set syb:scry color green
+execute store result bossbar syb:scry max run scoreboard players get scry_dur settings
 
+bossbar add syb:investigate {"translate":"syb.bossbar.investigate","color":"green"}
+bossbar set syb:investigate color green
+execute store result bossbar syb:investigate max run scoreboard players get investigate_dur settings
+
+bossbar add syb:pick_pres {"translate":"syb.bossbar.pick_pres","color":"green"}
+bossbar set syb:pick_pres color green
+execute store result bossbar syb:pick_pres max run scoreboard players get pick_pres_dur settings
+
+bossbar add syb:elim_player {"translate":"syb.bossbar.elim_player","color":"green"}
+bossbar set syb:elim_player color green
+execute store result bossbar syb:elim_player max run scoreboard players get elim_dur settings
 
 ## DEV STUFF
 execute if score dev_mode game_data matches 1 run function syb:admin/dev_mode
