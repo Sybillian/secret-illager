@@ -163,6 +163,7 @@ team modify spec prefix {"translate":"syb.team.prefix.spec","color":"gray"}
 
 team add lobby {"translate": "syb.team.name.lobby"}
 team modify lobby color white
+team modify lobby friendlyFire false
 
 ## Bossbars
 bossbar add syb:nom {"translate":"syb.bossbar.nom","color":"dark_aqua"}
