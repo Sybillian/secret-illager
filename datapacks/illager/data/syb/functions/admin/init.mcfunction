@@ -74,9 +74,9 @@ scoreboard players set i_policies_inhand game_data 0
 
 scoreboard players set nom_dur settings 2400
 scoreboard players set scry_dur settings 2400
-scoreboard plaeyrs set investigate_dur settings 2400
-scoreboard plaeyrs set pick_pres_dur settings 2400
-scoreboard plaeyrs set elim_dur settings 2400
+scoreboard players set investigate_dur settings 2400
+scoreboard players set pick_pres_dur settings 2400
+scoreboard players set elim_dur settings 2400
 
 ## Display
 team add display_10
