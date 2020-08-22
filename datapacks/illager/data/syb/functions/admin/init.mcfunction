@@ -38,6 +38,9 @@ gamerule showDeathMessages false
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
 
+fill -1 22 -7 1 27 -7 minecraft:white_stained_glass_pane replace #syb:glass_panes
+fill -1 22 -8 1 27 -8 minecraft:white_concrete replace #syb:concretes
+
 ## Scoreboards and settings
 scoreboard objectives add used_coas minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add math dummy
@@ -71,12 +74,30 @@ scoreboard players set no_votes game_data 0
 scoreboard players set yes_votes game_data 0
 scoreboard players set v_policies_inhand game_data 0
 scoreboard players set i_policies_inhand game_data 0
+scoreboard players set current_pres game_data 0
+scoreboard players set villagers game_data 0
+scoreboard players set illagers game_data 0
 
 scoreboard players set nom_dur settings 2400
+scoreboard players set vote_nom_dur settings 2400
+scoreboard players set discard_policy_dur settings 2400
+scoreboard players set select_policy_dur settings 2400
 scoreboard players set scry_dur settings 2400
 scoreboard players set investigate_dur settings 2400
 scoreboard players set pick_pres_dur settings 2400
 scoreboard players set elim_dur settings 2400
+
+scoreboard players reset * id
+scoreboard players reset * nom_vote
+scoreboard players reset * used_coas
+scoreboard players reset * role
+tag @a remove pres
+tag @a remove chancellor
+tag @a remove nom_chancellor
+tag @a remove discarded
+tag @a remove playing
+tag @a remove dead
+tag @a remove illager
 
 ## Display
 team add display_10
@@ -120,8 +141,8 @@ team modify display_6 prefix ""
 team modify display_5 prefix {"translate":"syb.scoreboard.villager.0","color":"green"}
 team modify display_4 prefix {"translate":"syb.scoreboard.illager.0","color":"red"}
 team modify display_3 prefix ""
-team modify display_2 prefix {"translate":"syb.scoreboard.event.0","color":"red"}
-team modify display_1 prefix {"translate":"syb.scoreboard.phase.0","color":"red"}
+team modify display_2 prefix {"translate":"syb.scoreboard.event.none","color":"red"}
+team modify display_1 prefix {"translate":"syb.scoreboard.phase.election","color":"red"}
 team modify display_0 prefix ""
 
 ## Teams
@@ -144,9 +165,21 @@ team add lobby {"translate": "syb.team.name.lobby"}
 team modify lobby color white
 
 ## Bossbars
+bossbar add syb:nom {"translate":"syb.bossbar.nom","color":"dark_aqua"}
+bossbar set syb:nom color blue
+execute store result bossbar syb:nom max run scoreboard players get nom_dur settings
+
 bossbar add syb:vote_nom {"translate":"syb.bossbar.vote_nom","color":"dark_aqua"}
 bossbar set syb:vote_nom color blue
-execute store result bossbar syb:vote_nom max run scoreboard players get nom_dur settings
+execute store result bossbar syb:vote_nom max run scoreboard players get vote_nom_dur settings
+
+bossbar add syb:discard_policy {"translate":"syb.bossbar.discard_policy","color":"dark_aqua"}
+bossbar set syb:discard_policy color blue
+execute store result bossbar syb:discard_policy max run scoreboard players get discard_policy_dur settings
+
+bossbar add syb:select_policy {"translate":"syb.bossbar.select_policy","color":"dark_aqua"}
+bossbar set syb:select_policy color blue
+execute store result bossbar syb:select_policy max run scoreboard players get select_policy_dur settings
 
 bossbar add syb:scry {"translate":"syb.bossbar.scry","color":"green"}
 bossbar set syb:scry color green

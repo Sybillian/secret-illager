@@ -1,11 +1,8 @@
-execute as @a if entity @s[nbt={SelectedItem:{tag:{custom_item:vote_yes}}},scores={used_coas=1..}] run say Voted yes.
-execute as @a if entity @s[nbt={SelectedItem:{tag:{custom_item:vote_no}}},scores={used_coas=1..}] run say Voted no.
+execute as @a if entity @s[nbt={SelectedItem:{tag:{custom_item:vote_yes}}},scores={used_coas=1..}] run function syb:election/trigger/player/voted_yes
+execute as @a if entity @s[nbt={SelectedItem:{tag:{custom_item:vote_no}}},scores={used_coas=1..}] run function syb:election/trigger/player/voted_no
 
-
-execute if score time_seconds math matches 0 run function syb:election/trigger/vote_finished
+execute if score phase_time game_data matches 0 run function syb:election/trigger/vote_finished
 scoreboard players remove phase_time game_data 1
-# scoreboard players operation game_seconds game_data = phase_time game_data
-# scoreboard players operation game_seconds game_data /= 20 math
 
 scoreboard players operation time_ticks math = phase_time game_data
 scoreboard players operation time_minutes math = time_ticks math

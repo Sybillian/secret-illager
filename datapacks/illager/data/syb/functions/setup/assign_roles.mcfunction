@@ -1,6 +1,8 @@
 tag @a add playing
 scoreboard players set @a role 0
-execute as @a run scoreboard players add players game_data 1
+# PLACEHOLDER
+scoreboard players set players game_data 5
+# execute as @a run scoreboard players add players game_data 1
 
 execute if score players game_data matches 5 run scoreboard players set @a[sort=random,limit=3,scores={role=0}] role 1
 execute if score players game_data matches 6..7 run scoreboard players set @a[sort=random,limit=4,scores={role=0}] role 1
@@ -13,8 +15,8 @@ execute if score players game_data matches 9..10 run scoreboard players set @a[s
 
 scoreboard players set @a[sort=random,limit=1,scores={role=0}] role 3
 
-execute as @a[scores={role=1}] run scoreboard players add vilagers game_data 1
-execute as @a[scores={role=2}] run scoreboard players add illagers game_data 2
+execute as @a[scores={role=1}] run scoreboard players add villagers game_data 1
+execute as @a[scores={role=2}] run scoreboard players add illagers game_data 1
 
 tellraw @a [{"translate":"syb.chat.playercount.villagers","color":"green","with":[{"score":{"name":"villagers","objective":"game_data"}}]}]
 tellraw @a [{"translate":"syb.chat.playercount.illagers","color":"red","with":[{"score":{"name":"illagers","objective":"game_data"}}]}]
@@ -48,5 +50,5 @@ execute if score players game_data matches 8 run tellraw @a [{"translate":"syb.c
 execute if score players game_data matches 9 run tellraw @a [{"translate":"syb.chat.turn_order.9","with":[{"selector":"@a[scores={id=1}]"},{"selector":"@a[scores={id=2}]"},{"selector":"@a[scores={id=3}]"},{"selector":"@a[scores={id=4}]"},{"selector":"@a[scores={id=5}]"},{"selector":"@a[scores={id=6}]"},{"selector":"@a[scores={id=7}]"},{"selector":"@a[scores={id=8}]"},{"selector":"@a[scores={id=9}]"}]}]
 execute if score players game_data matches 10 run tellraw @a [{"translate":"syb.chat.turn_order.10","with":[{"selector":"@a[scores={id=1}]"},{"selector":"@a[scores={id=2}]"},{"selector":"@a[scores={id=3}]"},{"selector":"@a[scores={id=4}]"},{"selector":"@a[scores={id=5}]"},{"selector":"@a[scores={id=6}]"},{"selector":"@a[scores={id=7}]"},{"selector":"@a[scores={id=8}]"},{"selector":"@a[scores={id=9}]"},{"selector":"@a[scores={id=10}]"}]}]
 
-# Deck build
-# loot spawn 0 5 0 loot syb:util/deck
+function syb:setup/build_deck
+schedule function syb:setup/start_game 4s

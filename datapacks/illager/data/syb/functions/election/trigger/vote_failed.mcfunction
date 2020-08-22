@@ -7,6 +7,8 @@ scoreboard players set nom_chancellor game_data 0
 scoreboard players reset * nom_vote
 scoreboard players reset * used_coas
 
+tag @a remove nom_chancellor
+
 scoreboard players add fails game_data 1
 execute if score fails game_data matches 3 run function syb:election/trigger/force_policy
 execute unless score fails game_data matches 3 run function syb:election/trigger/new_pres

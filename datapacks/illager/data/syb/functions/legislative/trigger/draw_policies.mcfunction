@@ -1,6 +1,10 @@
 # This is incredibly stupid I don't know why I thought this was the best way of doing it
 # BUT IT WORKS so don't harass me
 scoreboard players add villager_policies game_data 0
+scoreboard players set action game_data 1
+scoreboard players operation phase_time game_data = vote_nom_dur settings
+bossbar set syb:discard_policy players @a
+bossbar set syb:discard_policy visible true
 
 replaceitem block 0 1 0 container.0 minecraft:carrot_on_a_stick
 data modify block 0 1 0 RecordItem set from storage game:deck Cards[0]
@@ -27,4 +31,4 @@ tp @e[type=minecraft:item,limit=3] @a[tag=pres,limit=1]
 
 tellraw @a[tag=pres] {"translate":"syb.chat.draw_policies.pres","color":"green"}
 
-team modify display_1 prefix {"translate":"syb.scoreboard.phase.1","color":"red"}
+team modify display_1 prefix {"translate":"syb.scoreboard.phase.legislative","color":"red"}

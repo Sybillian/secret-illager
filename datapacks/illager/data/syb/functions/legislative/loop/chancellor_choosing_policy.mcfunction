@@ -1,7 +1,7 @@
-execute as @a if entity @s[nbt={SelectedItem:{tag:{policy:0}}},scores={used_coas=1..}] run function syb:legislative/trigger/play_villager_policy
-execute as @a if entity @s[nbt={SelectedItem:{tag:{policy:1}}},scores={used_coas=1..}] run function syb:legislative/trigger/play_illager_policy
+execute as @a if entity @s[tag=!discarded,nbt={SelectedItem:{tag:{policy:0}}},scores={used_coas=1..}] run function syb:legislative/trigger/play_villager_policy
+execute as @a if entity @s[tag=!discarded,nbt={SelectedItem:{tag:{policy:1}}},scores={used_coas=1..}] run function syb:legislative/trigger/play_illager_policy
 
-execute if score time_seconds math matches 0 run function syb:election/trigger/vote_finished
+execute if score phase_time game_data matches 0 run function syb:election/trigger/vote_finished
 scoreboard players remove phase_time game_data 1
 
 scoreboard players operation time_ticks math = phase_time game_data
@@ -18,7 +18,7 @@ execute if score time_minutes math >= 10 math run scoreboard players reset min_b
 execute if score time_seconds math < 10 math run scoreboard players set sec_below_10 math 0
 execute if score time_seconds math >= 10 math run scoreboard players reset sec_below_10
 
-execute store result bossbar syb:vote_nom value run scoreboard players get phase_time game_data
+execute store result bossbar syb:select_policy value run scoreboard players get phase_time game_data
 
-bossbar set syb:vote_nom name {"translate":"syb.bossbar.vote_nom.alt","color":"dark_aqua","with":[{"score":{"name":"min_below_10","objective":"math"}},{"score":{"name":"time_minutes","objective":"math"}},{"score":{"name":"sec_below_10","objective":"math"}},{"score":{"name":"time_seconds","objective":"math"}}]}
-bossbar set syb:vote_nom name {"translate":"syb.bossbar.vote_nom","color":"dark_aqua","with":[{"score":{"name":"min_below_10","objective":"math"}},{"score":{"name":"time_minutes","objective":"math"}},{"score":{"name":"sec_below_10","objective":"math"}},{"score":{"name":"time_seconds","objective":"math"}}]}
+bossbar set syb:select_policy name {"translate":"syb.bossbar.select_policy.alt","color":"dark_aqua","with":[{"score":{"name":"min_below_10","objective":"math"}},{"score":{"name":"time_minutes","objective":"math"}},{"score":{"name":"sec_below_10","objective":"math"}},{"score":{"name":"time_seconds","objective":"math"}}]}
+bossbar set syb:select_policy name {"translate":"syb.bossbar.select_policy","color":"dark_aqua","with":[{"score":{"name":"min_below_10","objective":"math"}},{"score":{"name":"time_minutes","objective":"math"}},{"score":{"name":"sec_below_10","objective":"math"}},{"score":{"name":"time_seconds","objective":"math"}}]}
