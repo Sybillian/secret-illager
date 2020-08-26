@@ -1,21 +1,21 @@
 {
   "display": {
     "title": [
-      {"translate": "syb.advancement.name.cleric"}
+      {"translate": "syb.advancement.name.illagers"}
     ],
     "description": [
-      {"translate": "syb.advancement.desc.cleric"}
+      {"translate": "syb.advancement.desc.illagers"}
     ],
     "icon": {
       "item": "minecraft:carrot_on_a_stick",
-      "nbt": "{CustomModelData:4}"
+      "nbt": "{CustomModelData:5}"
     },
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": false
   },
-  "parent": "syb:display/golem",
+  "parent": "syb:main/basics",
   "criteria": {
     "firstjoin": {
       "trigger": "minecraft:tick"

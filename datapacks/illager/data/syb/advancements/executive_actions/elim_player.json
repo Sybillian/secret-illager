@@ -1,0 +1,32 @@
+{
+  "display": {
+    "title": [
+      {
+        "translate": "syb.advancement.name.elim_player",
+        "color":"#ff4040",
+        "bold":"true",
+        "with":[{
+          "translate":"syb.generic.action",
+          "bold": "false"
+        }]
+      }
+    ],
+    "description": [
+      {"translate": "syb.advancement.desc.elim_player"}
+    ],
+    "icon": {
+      "item": "minecraft:crossbow",
+      "nbt": "{Charged:1b}"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "syb:executive_actions/pick_pres",
+  "criteria": {
+    "firstjoin": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "display": {
+    "title": [
+      {
+        "translate": "syb.advancement.name.elim_player",
+        "color":"#ff5eef",
+        "bold":"true",
+        "with":[{
+          "translate":"syb.generic.tip",
+          "bold": "false"
+        }]
+      }
+    ],
+    "description": [
+      {"translate": "syb.advancement.desc.elim_player_advanced"}
+    ],
+    "icon": {
+      "item": "minecraft:wither_rose"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "syb:executive_actions/pick_pres_advanced",
+  "criteria": {
+    "firstjoin": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

@@ -4,7 +4,7 @@
       {"translate": "syb.advancement.name.villagers"}
     ],
     "description": [
-      {"translate": "syb.advancement.desc.villagers"}
+      {"translate": "syb.advancement.desc.villagers.1"}
     ],
     "icon": {
       "item": "minecraft:carrot_on_a_stick",
@@ -15,7 +15,7 @@
     "announce_to_chat": false,
     "hidden": false
   },
-  "parent": "syb:display/basics",
+  "parent": "syb:main/basics",
   "criteria": {
     "firstjoin": {
       "trigger": "minecraft:tick"

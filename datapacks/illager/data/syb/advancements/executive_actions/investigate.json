@@ -1,0 +1,31 @@
+{
+  "display": {
+    "title": [
+      {
+        "translate": "syb.advancement.name.investigate",
+        "color":"#ff4040",
+        "bold":"true",
+        "with":[{
+          "translate":"syb.generic.action",
+          "bold": "false"
+        }]
+      }
+    ],
+    "description": [
+      {"translate": "syb.advancement.desc.investigate"}
+    ],
+    "icon": {
+      "item": "minecraft:ender_eye"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "syb:executive_actions/scry",
+  "criteria": {
+    "firstjoin": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

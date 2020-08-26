@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": [
+      {"translate": "syb.advancement.name.exec_root"}
+    ],
+    "description": [
+      {"translate": "syb.advancement.desc.exec_root"}
+    ],
+    "icon": {
+      "item": "minecraft:golden_helmet"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "minecraft:textures/block/stone_bricks.png"
+  },
+  "criteria": {
+    "firstjoin": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}
