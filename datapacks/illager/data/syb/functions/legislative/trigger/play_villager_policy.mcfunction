@@ -12,4 +12,5 @@ execute if score policies_v game_data matches 5 run team modify display_5 prefix
 
 bossbar set syb:select_policy visible false
 
-schedule function syb:election/trigger/new_pres 2s
+execute if score policies_v game_data matches 5 run function syb:game/trigger/end/villager_win
+execute if score policies_v game_data matches ..4 run schedule function syb:election/trigger/new_pres 2s

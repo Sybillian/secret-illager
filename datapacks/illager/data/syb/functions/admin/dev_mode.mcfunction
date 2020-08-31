@@ -3,3 +3,4 @@ gamerule reducedDebugInfo false
 gamerule sendCommandFeedback true
 gamerule showDeathMessages true
 gamerule spectatorsGenerateChunks true
+scoreboard objectives setdisplay list id

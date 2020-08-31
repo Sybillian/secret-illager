@@ -51,6 +51,8 @@ scoreboard objectives add id dummy
 scoreboard objectives add nom_vote dummy
 scoreboard objectives add role dummy
 scoreboard objectives add display dummy {"translate": "syb.scoreboard.title","color":"dark_red","bold":"true"}
+scoreboard objectives setdisplay list
+scoreboard objectives setdisplay sidebar display
 
 scoreboard players set 100000 math 100000
 scoreboard players set 10000 math 10000
@@ -77,6 +79,7 @@ scoreboard players set i_policies_inhand game_data 0
 scoreboard players set current_pres game_data 0
 scoreboard players set villagers game_data 0
 scoreboard players set illagers game_data 0
+scoreboard players set start_countdown game_data 10
 
 scoreboard players set nom_dur settings 2400
 scoreboard players set vote_nom_dur settings 2400
@@ -91,6 +94,7 @@ scoreboard players reset * id
 scoreboard players reset * nom_vote
 scoreboard players reset * used_coas
 scoreboard players reset * role
+team leave @a
 tag @a remove pres
 tag @a remove chancellor
 tag @a remove nom_chancellor
@@ -165,37 +169,57 @@ team add lobby {"translate": "syb.team.name.lobby"}
 team modify lobby color white
 team modify lobby friendlyFire false
 
+team add villager {"translate": "syb.team.name.villager"}
+team modify villager color green
+team modify villager prefix {"translate":"syb.team.prefix.villager","color":"green"}
+
+team add illager {"translate": "syb.team.name.illager"}
+team modify illager color red
+team modify illager prefix {"translate":"syb.team.prefix.illager","color":"red"}
+
+team add arch_illager {"translate": "syb.team.name.arch_illager"}
+team modify arch_illager color dark_red
+team modify arch_illager prefix {"translate":"syb.team.prefix.arch_illager","color":"dark_red"}
+
 ## Bossbars
 bossbar add syb:nom {"translate":"syb.bossbar.nom","color":"dark_aqua"}
 bossbar set syb:nom color blue
+bossbar set syb:nom visible false
 execute store result bossbar syb:nom max run scoreboard players get nom_dur settings
 
 bossbar add syb:vote_nom {"translate":"syb.bossbar.vote_nom","color":"dark_aqua"}
 bossbar set syb:vote_nom color blue
+bossbar set syb:vote_nom visible false
 execute store result bossbar syb:vote_nom max run scoreboard players get vote_nom_dur settings
 
 bossbar add syb:discard_policy {"translate":"syb.bossbar.discard_policy","color":"dark_aqua"}
 bossbar set syb:discard_policy color blue
+bossbar set syb:discard_policy visible false
 execute store result bossbar syb:discard_policy max run scoreboard players get discard_policy_dur settings
 
 bossbar add syb:select_policy {"translate":"syb.bossbar.select_policy","color":"dark_aqua"}
 bossbar set syb:select_policy color blue
+bossbar set syb:select_policy visible false
 execute store result bossbar syb:select_policy max run scoreboard players get select_policy_dur settings
 
 bossbar add syb:scry {"translate":"syb.bossbar.scry","color":"green"}
 bossbar set syb:scry color green
+bossbar set syb:scry visible false
 execute store result bossbar syb:scry max run scoreboard players get scry_dur settings
 
 bossbar add syb:investigate {"translate":"syb.bossbar.investigate","color":"green"}
 bossbar set syb:investigate color green
+bossbar set syb:investigate visible false
 execute store result bossbar syb:investigate max run scoreboard players get investigate_dur settings
 
 bossbar add syb:pick_pres {"translate":"syb.bossbar.pick_pres","color":"green"}
 bossbar set syb:pick_pres color green
+bossbar set syb:pick_pres visible false
 execute store result bossbar syb:pick_pres max run scoreboard players get pick_pres_dur settings
 
 bossbar add syb:elim_player {"translate":"syb.bossbar.elim_player","color":"green"}
 bossbar set syb:elim_player color green
+bossbar set syb:elim_player visible false
 execute store result bossbar syb:elim_player max run scoreboard players get elim_dur settings
 
 ## DEV STUFF

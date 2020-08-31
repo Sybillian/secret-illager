@@ -9,4 +9,6 @@ scoreboard players set fails game_data 0
 scoreboard players reset * nom_vote
 scoreboard players reset * used_coas
 
-schedule function syb:legislative/trigger/begin_legislative 2s
+execute if score policies_i game_data matches 3.. if entity @a[tag=chancellor,scores={role=3}] run function syb:game/trigger/end/illager_win
+execute if score policies_i game_data matches 3.. unless entity @a[tag=chancellor,scores={role=3}] run schedule function syb:legislative/trigger/begin_legislative 2s
+execute unless score policies_i game_data matches 3.. unless entity @a[tag=chancellor,scores={role=3}] run schedule function syb:legislative/trigger/begin_legislative 2s
