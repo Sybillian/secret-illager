@@ -80,6 +80,9 @@ scoreboard players set current_pres game_data 0
 scoreboard players set villagers game_data 0
 scoreboard players set illagers game_data 0
 scoreboard players set start_countdown game_data 10
+scoreboard players set investigate_target game_data 0
+scoreboard players set picked_pres game_data 0
+scoreboard players set elim_target game_data 0
 
 scoreboard players set nom_dur settings 2400
 scoreboard players set vote_nom_dur settings 2400

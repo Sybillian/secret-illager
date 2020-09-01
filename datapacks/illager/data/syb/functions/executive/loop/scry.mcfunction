@@ -1,4 +1,4 @@
-execute as @a[tag=pres,scores={used_coas=1..}] if data entity @s SelectedItem{id:"minecraft:player_head"} run function syb:executive/trigger/end/scry
+execute if entity @a[tag=pres,scores={used_coas=1..}] run function syb:executive/trigger/end/scry
 
 execute if score time_seconds math matches 0 run function syb:executive/trigger/end/scry
 scoreboard players remove phase_time game_data 1
