@@ -1,4 +1,4 @@
-tellraw @a {"text":"Good game! Press the button to play again!"}
+tellraw @a {"translate":"syb.chat.end.play_again"}
 
 fill -1 22 -7 1 27 -7 minecraft:white_stained_glass_pane replace #syb:glass_panes
 fill -1 22 -8 1 27 -8 minecraft:white_concrete replace #syb:concretes
