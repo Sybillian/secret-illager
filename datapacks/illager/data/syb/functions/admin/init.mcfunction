@@ -84,6 +84,7 @@ scoreboard players set investigate_target game_data 0
 scoreboard players set picked_pres game_data 0
 scoreboard players set elim_target game_data 0
 
+scoreboard players set veto_dur settings 2400
 scoreboard players set nom_dur settings 2400
 scoreboard players set vote_nom_dur settings 2400
 scoreboard players set discard_policy_dur settings 2400
@@ -224,6 +225,11 @@ bossbar add syb:elim_player {"translate":"syb.bossbar.elim_player","color":"gree
 bossbar set syb:elim_player color green
 bossbar set syb:elim_player visible false
 execute store result bossbar syb:elim_player max run scoreboard players get elim_dur settings
+
+bossbar add syb:veto {"translate":"syb.bossbar.veto","color":"green"}
+bossbar set syb:veto color green
+bossbar set syb:veto visible false
+execute store result bossbar syb:veto max run scoreboard players get veto_dur settings
 
 ## DEV STUFF
 execute if score dev_mode game_data matches 1 run function syb:admin/dev_mode
