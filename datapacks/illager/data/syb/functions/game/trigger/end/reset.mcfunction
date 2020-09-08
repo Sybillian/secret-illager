@@ -22,6 +22,10 @@ scoreboard players set current_pres game_data 0
 scoreboard players set villagers game_data 0
 scoreboard players set illagers game_data 0
 scoreboard players set start_countdown game_data 10
+scoreboard players set investigate_target game_data 0
+scoreboard players set picked_pres game_data 0
+scoreboard players set elim_target game_data 0
+scoreboard players set attempted_veto game_data 0
 
 scoreboard players reset * id
 scoreboard players reset * nom_vote
@@ -49,3 +53,4 @@ bossbar set syb:scry visible false
 bossbar set syb:investigate visible false
 bossbar set syb:pick_pres visible false
 bossbar set syb:elim_player visible false
+bossbar set syb:veto visible false

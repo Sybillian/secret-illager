@@ -1,5 +1,6 @@
 execute as @a if entity @s[tag=!discarded,nbt={SelectedItem:{tag:{policy:0}}},scores={used_coas=1..}] run function syb:legislative/trigger/play_villager_policy
 execute as @a if entity @s[tag=!discarded,nbt={SelectedItem:{tag:{policy:1}}},scores={used_coas=1..}] run function syb:legislative/trigger/play_illager_policy
+execute as @a if entity @s[tag=!discarded,nbt={SelectedItem:{tag:{veto_action:0}}},scores={used_coas=1..}] run function syb:legislative/veto/req_veto
 
 execute if score phase_time game_data matches 0 run function syb:election/trigger/vote_finished
 scoreboard players remove phase_time game_data 1

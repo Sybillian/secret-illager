@@ -83,6 +83,7 @@ scoreboard players set start_countdown game_data 10
 scoreboard players set investigate_target game_data 0
 scoreboard players set picked_pres game_data 0
 scoreboard players set elim_target game_data 0
+scoreboard players set attempted_veto game_data 0
 
 scoreboard players set veto_dur settings 2400
 scoreboard players set nom_dur settings 2400
