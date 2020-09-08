@@ -1,4 +1,4 @@
-tellraw @a {"translate":"syb.chat.accept_veto","with":[{"selector":"@a[tag=pres]"},{"selector":"@a[tag=chancellor]"}]}
+tellraw @a {"translate":"syb.chat.accept_veto","with":[{"translate":"syb.prefix.game","color":"green","bold":"true"},{"selector":"@a[tag=pres]"},{"selector":"@a[tag=chancellor]"}]}
 
 scoreboard players set action game_data 0
 

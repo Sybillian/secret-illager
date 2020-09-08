@@ -2,7 +2,7 @@ clear @a[tag=pres]
 tag @a[tag=pres] remove discarded
 scoreboard players set @a[tag=pres] used_coas 0
 
-tellraw @a[tag=chancellor] {"translate":"syb.chat.received_policies","with":[{"selector":"@a[tag=pres]"}]}
+tellraw @a[tag=chancellor] {"translate":"syb.chat.received_policies","with":[{"translate":"syb.prefix.whisper","bold":"true","color":"dark_gray"},{"selector":"@a[tag=pres]"}]}
 
 execute if score v_policies_inhand game_data matches 1 run give @a[tag=chancellor] minecraft:carrot_on_a_stick{CustomModelData:2,policy:0,display:{Name:'{"translate":"syb.item.name.villager_policy"}',Lore:['{"translate":"syb.item.lore.villager_policy"}']}} 1
 execute if score v_policies_inhand game_data matches 2 run give @a[tag=chancellor] minecraft:carrot_on_a_stick{CustomModelData:2,policy:0,display:{Name:'{"translate":"syb.item.name.villager_policy"}',Lore:['{"translate":"syb.item.lore.villager_policy"}']}} 2

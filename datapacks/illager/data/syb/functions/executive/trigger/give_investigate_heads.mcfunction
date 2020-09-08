@@ -1,4 +1,4 @@
-tellraw @a {"translate":"syb.chat.investigate.select"}
+tellraw @a {"translate":"syb.chat.investigate.select","with":[{"translate":"syb.prefix.game","color":"green","bold":"true"}]}
 execute as @a[tag=!pres,tag=playing] run loot give @a[tag=pres] loot syb:util/player_head
 replaceitem entity @a[tag=pres] weapon.offhand minecraft:carrot_on_a_stick
 

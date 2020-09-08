@@ -29,6 +29,6 @@ execute as @e[type=minecraft:item,nbt={Item:{tag:{policy:1}}}] run scoreboard pl
 execute as @e[type=minecraft:item,limit=3] run data modify entity @s PickupDelay set value 0s
 tp @e[type=minecraft:item,limit=3] @a[tag=pres,limit=1]
 
-tellraw @a[tag=pres] {"translate":"syb.chat.draw_policies.pres","color":"green"}
+tellraw @a[tag=pres] {"translate":"syb.chat.draw_policies.pres","color":"green","with":[{"translate":"syb.prefix.whisper","bold":"true","color":"dark_gray"}]}
 
 team modify display_1 prefix {"translate":"syb.scoreboard.phase.legislative","color":"red"}

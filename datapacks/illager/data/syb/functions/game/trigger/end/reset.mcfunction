@@ -1,4 +1,4 @@
-tellraw @a {"translate":"syb.chat.end.play_again"}
+tellraw @a {"translate":"syb.chat.end.play_again","with":[{"translate":"syb.prefix.game","color":"green","bold":"true"}]}
 
 fill -1 22 -7 1 27 -7 minecraft:white_stained_glass_pane replace #syb:glass_panes
 fill -1 22 -8 1 27 -8 minecraft:white_concrete replace #syb:concretes

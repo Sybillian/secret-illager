@@ -1,7 +1,7 @@
 clear @a[tag=chancellor] minecraft:carrot_on_a_stick
 scoreboard players add policies_v game_data 1
 scoreboard players set @a[tag=chancellor] used_coas 0
-tellraw @a {"translate":"syb.chat.play_policy.villager","with":[{"selector":"@a[tag=chancellor]"}]}
+tellraw @a {"translate":"syb.chat.play_policy.villager","with":[{"translate":"syb.prefix.game","color":"green","bold":"true"},{"selector":"@a[tag=chancellor]"}]}
 schedule function syb:legislative/trigger/played_policy 2s
 
 execute if score policies_v game_data matches 1 run team modify display_5 prefix {"translate":"syb.scoreboard.villager.1","color":"green"}

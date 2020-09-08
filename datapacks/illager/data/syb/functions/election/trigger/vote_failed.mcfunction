@@ -1,4 +1,4 @@
-tellraw @a [{"translate":"syb.chat.chancellor_failed","with":[{"score":{"name":"yes_votes","objective":"game_data"}},{"score":{"name":"no_votes","objective":"game_data"}}]}]
+tellraw @a [{"translate":"syb.chat.chancellor_failed","with":[{"translate":"syb.prefix.game","color":"green","bold":"true"},{"score":{"name":"yes_votes","objective":"game_data"}},{"score":{"name":"no_votes","objective":"game_data"}}]}]
 scoreboard players set action game_data 0
 
 scoreboard players set no_votes game_data 0

@@ -1,4 +1,4 @@
-tellraw @a {"translate": "syb.chat.no_executive_action","with":[{"score":{"name":"policies_i","objective":"game_data"}}]}
+tellraw @a {"translate": "syb.chat.no_executive_action","with":[{"translate":"syb.prefix.game","color":"green","bold":"true"},{"score":{"name":"policies_i","objective":"game_data"}}]}
 
 execute if score players game_data matches 5..6 if score policies_i game_data matches 0 run team modify display_2 prefix {"translate":"syb.scoreboard.event.none","color":"red"}
 execute if score players game_data matches 5..6 if score policies_i game_data matches 1 run team modify display_2 prefix {"translate":"syb.scoreboard.event.none","color":"red"}

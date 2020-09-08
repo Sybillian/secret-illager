@@ -1,4 +1,4 @@
-tellraw @a {"translate":"syb.chat.decline_veto","with":[{"selector":"@a[tag=pres]"},{"selector":"@a[tag=chancellor]"}]}
+tellraw @a {"translate":"syb.chat.decline_veto","with":[{"translate":"syb.prefix.game","color":"green","bold":"true"},{"selector":"@a[tag=pres]"},{"selector":"@a[tag=chancellor]"}]}
 
 scoreboard players set attempted_veto game_data 1
 scoreboard players set action game_data 0
