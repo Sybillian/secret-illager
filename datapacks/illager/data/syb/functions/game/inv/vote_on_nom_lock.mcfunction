@@ -1,0 +1,4 @@
+function syb:game/trigger/update_caos
+replaceitem entity @s hotbar.3 minecraft:carrot_on_a_stick{custom_item:"vote_yes",CustomModelData:0,display:{Name:'{"translate":"syb.item.vote.yes"}'}}
+replaceitem entity @s hotbar.5 minecraft:carrot_on_a_stick{custom_item:"vote_no",CustomModelData:1,display:{Name:'{"translate":"syb.item.vote.no"}'}}
+replaceitem entity @s hotbar.8 minecraft:carrot_on_a_stick{custom_item:"lock_vote",CustomModelData:8,display:{Name:'{"translate":"syb.item.name.lock_vote"}',Lore:['{"translate":"syb.item.lore.lock_vote.0","color":"white","italic":"false"}','{"translate":"syb.item.lore.lock_vote.1","color":"white","italic":"false"}','{"translate":""}','{"translate":"syb.item.lore.lock_vote.2","color":"white","italic":"false"}','{"translate":"syb.item.lore.lock_vote.3","color":"white","italic":"false"}']}}
