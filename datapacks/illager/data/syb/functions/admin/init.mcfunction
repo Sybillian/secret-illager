@@ -50,6 +50,7 @@ scoreboard objectives add reset_me dummy
 scoreboard objectives add id dummy
 scoreboard objectives add nom_vote dummy
 scoreboard objectives add role dummy
+scoreboard objectives add inv dummy
 scoreboard objectives add display dummy {"translate": "syb.scoreboard.title","color":"dark_red","bold":"true"}
 scoreboard objectives setdisplay list
 scoreboard objectives setdisplay sidebar display
@@ -104,6 +105,7 @@ scoreboard players reset * id
 scoreboard players reset * nom_vote
 scoreboard players reset * used_coas
 scoreboard players reset * role
+scoreboard players reset * inv
 team leave @a
 tag @a remove pres
 tag @a remove chancellor

@@ -31,6 +31,7 @@ scoreboard players reset * id
 scoreboard players reset * nom_vote
 scoreboard players reset * used_coas
 scoreboard players reset * role
+scoreboard players reset * inv
 team join lobby @a
 effect clear @a minecraft:invisibility
 tag @a remove pres
