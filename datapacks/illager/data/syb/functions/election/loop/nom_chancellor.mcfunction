@@ -1,4 +1,4 @@
-execute store result score nom_chancellor game_data run data get entity @e[type=minecraft:item,limit=1] Item.tag.player_id
+execute as @a[tag=pres] if entity @s[nbt={SelectedItem:{id:"minecraft:player_head"}},scores={used_coas=1..}] store result score nom_chancellor game_data run data get entity @s SelectedItem.tag.player_id
 execute if score nom_chancellor game_data matches 1.. run function syb:election/trigger/selected_chancellor
 
 execute if score phase_time game_data matches 0 run function syb:election/trigger/vote_finished
