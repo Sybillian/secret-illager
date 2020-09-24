@@ -1,8 +1,9 @@
 tag @a add playing
 scoreboard players set @a role 0
 scoreboard players set players game_data 0
-execute as @a run scoreboard players add players game_data 1
-execute if score players game_data matches ..4 run function syb:game/trigger/cannot_start
+scoreboard players set players game_data 5
+#execute as @a run scoreboard players add players game_data 1
+#execute if score players game_data matches ..4 run function syb:game/trigger/cannot_start
 
 execute if score players game_data matches 5..6 run clone 2 22 -9 2 27 -9 2 22 -6
 execute if score players game_data matches 7..8 run clone 2 22 -11 2 27 -11 2 22 -6
@@ -53,6 +54,7 @@ execute if score players game_data matches 7 run tellraw @a [{"translate":"syb.c
 execute if score players game_data matches 8 run tellraw @a [{"translate":"syb.chat.turn_order.8","with":[{"translate":"syb.prefix.game","bold":"true","color":"green"},{"selector":"@a[scores={id=1}]"},{"selector":"@a[scores={id=2}]"},{"selector":"@a[scores={id=3}]"},{"selector":"@a[scores={id=4}]"},{"selector":"@a[scores={id=5}]"},{"selector":"@a[scores={id=6}]"},{"selector":"@a[scores={id=7}]"},{"selector":"@a[scores={id=8}]"}]}]
 execute if score players game_data matches 9 run tellraw @a [{"translate":"syb.chat.turn_order.9","with":[{"translate":"syb.prefix.game","bold":"true","color":"green"},{"selector":"@a[scores={id=1}]"},{"selector":"@a[scores={id=2}]"},{"selector":"@a[scores={id=3}]"},{"selector":"@a[scores={id=4}]"},{"selector":"@a[scores={id=5}]"},{"selector":"@a[scores={id=6}]"},{"selector":"@a[scores={id=7}]"},{"selector":"@a[scores={id=8}]"},{"selector":"@a[scores={id=9}]"}]}]
 execute if score players game_data matches 10 run tellraw @a [{"translate":"syb.chat.turn_order.10","with":[{"translate":"syb.prefix.game","bold":"true","color":"green"},{"selector":"@a[scores={id=1}]"},{"selector":"@a[scores={id=2}]"},{"selector":"@a[scores={id=3}]"},{"selector":"@a[scores={id=4}]"},{"selector":"@a[scores={id=5}]"},{"selector":"@a[scores={id=6}]"},{"selector":"@a[scores={id=7}]"},{"selector":"@a[scores={id=8}]"},{"selector":"@a[scores={id=9}]"},{"selector":"@a[scores={id=10}]"}]}]
+team join living @a
 
 # Build deck
 data remove storage game:deck Cards

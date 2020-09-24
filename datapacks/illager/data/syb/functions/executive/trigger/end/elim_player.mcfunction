@@ -16,3 +16,5 @@ execute at @a[tag=elim_target] run particle minecraft:soul ~ ~1 ~ 0.2 0.5 0.2 0 
 
 execute if score @a[tag=elim_target,limit=1] role matches 1..2 run schedule function syb:election/trigger/new_pres 2s
 execute if score @a[tag=elim_target,limit=1] role matches 3 run schedule function syb:game/trigger/end/villager_win 2s
+
+tag @a[tag=elim_target] remove elim_target

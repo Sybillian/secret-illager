@@ -85,15 +85,20 @@ scoreboard players set picked_pres game_data 0
 scoreboard players set elim_target game_data 0
 scoreboard players set attempted_veto game_data 0
 
+## Short events
+scoreboard players set vote_nom_dur settings 1200
+scoreboard players set scry_dur settings 1200
+
+## Medium events
 scoreboard players set veto_dur settings 2400
-scoreboard players set nom_dur settings 2400
-scoreboard players set vote_nom_dur settings 2400
 scoreboard players set discard_policy_dur settings 2400
 scoreboard players set select_policy_dur settings 2400
-scoreboard players set scry_dur settings 2400
-scoreboard players set investigate_dur settings 2400
-scoreboard players set pick_pres_dur settings 2400
-scoreboard players set elim_dur settings 2400
+
+## Long events
+scoreboard players set investigate_dur settings 4800
+scoreboard players set pick_pres_dur settings 4800
+scoreboard players set elim_dur settings 4800
+scoreboard players set nom_dur settings 4800
 
 scoreboard players reset * id
 scoreboard players reset * nom_vote
