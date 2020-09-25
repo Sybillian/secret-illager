@@ -6,24 +6,16 @@ scoreboard players operation phase_time game_data = discard_policy_dur settings
 bossbar set syb:discard_policy players @a
 bossbar set syb:discard_policy visible true
 
-replaceitem block 0 1 0 container.0 minecraft:carrot_on_a_stick
-data modify block 0 1 0 RecordItem set from storage game:deck Cards[0]
-data remove storage game:deck Cards[0]
-setblock 0 1 0 minecraft:air destroy
-setblock 0 1 0 minecraft:jukebox replace
+execute if data storage game:deck Cards[0].tag{policy:0} run give @a[tag=pres] minecraft:leather{CustomModelData:0,policy:0,display:{Name:'{"translate":"syb.item.name.villager_policy"}',Lore:['{"translate":"syb.item.lore.villager_policy"}']}}
+execute if data storage game:deck Cards[0].tag{policy:1} run give @a[tag=pres] minecraft:leather{CustomModelData:1,policy:1,display:{Name:'{"translate":"syb.item.name.illager_policy"}',Lore:['{"translate":"syb.item.lore.illager_policy"}']}}
+execute if data storage game:deck Cards[1].tag{policy:0} run give @a[tag=pres] minecraft:leather{CustomModelData:0,policy:0,display:{Name:'{"translate":"syb.item.name.villager_policy"}',Lore:['{"translate":"syb.item.lore.villager_policy"}']}}
+execute if data storage game:deck Cards[1].tag{policy:1} run give @a[tag=pres] minecraft:leather{CustomModelData:1,policy:1,display:{Name:'{"translate":"syb.item.name.illager_policy"}',Lore:['{"translate":"syb.item.lore.illager_policy"}']}}
+execute if data storage game:deck Cards[2].tag{policy:1} run give @a[tag=pres] minecraft:leather{CustomModelData:1,policy:1,display:{Name:'{"translate":"syb.item.name.illager_policy"}',Lore:['{"translate":"syb.item.lore.illager_policy"}']}}
+execute if data storage game:deck Cards[2].tag{policy:0} run give @a[tag=pres] minecraft:leather{CustomModelData:0,policy:0,display:{Name:'{"translate":"syb.item.name.villager_policy"}',Lore:['{"translate":"syb.item.lore.villager_policy"}']}}
 
-replaceitem block 0 1 0 container.0 minecraft:carrot_on_a_stick
-data modify block 0 1 0 RecordItem set from storage game:deck Cards[0]
+data remove storage game:deck Cards[2]
+data remove storage game:deck Cards[1]
 data remove storage game:deck Cards[0]
-setblock 0 1 0 minecraft:air destroy
-setblock 0 1 0 minecraft:jukebox replace
-
-replaceitem block 0 1 0 container.0 minecraft:carrot_on_a_stick
-data modify block 0 1 0 RecordItem set from storage game:deck Cards[0]
-data remove storage game:deck Cards[0]
-setblock 0 1 0 minecraft:air destroy
-setblock 0 1 0 minecraft:jukebox replace
-
 execute unless data storage game:deck Cards[2] run function syb:legislative/trigger/rebuild_deck
 
 execute as @e[type=minecraft:item,nbt={Item:{tag:{policy:0}}}] run scoreboard players add v_policies_inhand game_data 1

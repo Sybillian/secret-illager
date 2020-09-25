@@ -1,6 +1,11 @@
 execute as @a[tag=pres] if entity @s[nbt={SelectedItem:{id:"minecraft:player_head"}},scores={used_coas=1..}] store result score nom_chancellor game_data run data get entity @s SelectedItem.tag.player_id
 execute if score nom_chancellor game_data matches 1.. run function syb:election/trigger/selected_chancellor
 
+## Lock inventory
+execute as @a[tag=pres] store success score @s inv_changed run data modify storage syb:heads permanent[{id:"minecraft:player_head"}] set from entity @s Inventory[{id:"minecraft:player_head"}]
+execute as @a[tag=pres] store success score @s inv_changed run kill @e[type=minecraft:item]
+execute as @a[tag=pres] if score @s inv_changed matches 1 run function syb:game/inv/heads
+
 execute if score phase_time game_data matches 0 run function syb:election/trigger/vote_finished
 scoreboard players remove phase_time game_data 1
 

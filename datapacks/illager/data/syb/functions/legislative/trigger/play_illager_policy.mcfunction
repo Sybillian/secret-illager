@@ -1,4 +1,4 @@
-clear @a[tag=chancellor] minecraft:carrot_on_a_stick
+clear @a[tag=chancellor] minecraft:leather
 scoreboard players add policies_i game_data 1
 scoreboard players set @a[tag=chancellor] used_coas 0
 tellraw @a {"translate":"syb.chat.play_policy.illager","with":[{"translate":"syb.prefix.game","color":"green","bold":"true"},{"selector":"@a[tag=chancellor]"}]}
