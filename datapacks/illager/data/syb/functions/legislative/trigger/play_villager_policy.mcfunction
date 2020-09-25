@@ -1,4 +1,4 @@
-clear @a[tag=chancellor] minecraft:leather
+clear @a[tag=chancellor] minecraft:totem_of_undying
 scoreboard players add policies_v game_data 1
 scoreboard players set @a[tag=chancellor] used_coas 0
 tellraw @a {"translate":"syb.chat.play_policy.villager","with":[{"translate":"syb.prefix.game","color":"green","bold":"true"},{"selector":"@a[tag=chancellor]"}]}
