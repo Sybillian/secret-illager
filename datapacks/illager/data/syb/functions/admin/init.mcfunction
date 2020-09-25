@@ -115,6 +115,7 @@ tag @a remove discarded
 tag @a remove playing
 tag @a remove dead
 tag @a remove illager
+tag @a remove locked
 
 ## Display
 team add display_10

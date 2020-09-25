@@ -1,6 +1,7 @@
 scoreboard players set action game_data 0
 bossbar set syb:vote_nom visible false
 clear @a
+tag @a remove locked
 
 execute as @a[tag=playing,tag=!dead] if score @s nom_vote matches 0 run tellraw @a [{"translate":"syb.chat.vote_result","with":[{"translate":"syb.prefix.game","color":"green","bold":"true"},{"selector":"@s[scores={id=1..}]","color":"reset"},{"translate":"syb.generic.no","color":"red"}]}]
 execute as @a[tag=playing,tag=!dead] if score @s nom_vote matches 1 run tellraw @a [{"translate":"syb.chat.vote_result","with":[{"translate":"syb.prefix.game","color":"green","bold":"true"},{"selector":"@s[scores={id=1..}]","color":"reset"},{"translate":"syb.generic.yes","color":"green"}]}]
