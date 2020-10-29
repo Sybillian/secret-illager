@@ -1,4 +1,5 @@
 tag @a add playing
+scoreboard players set @a term_limited 0
 scoreboard players set @a role 0
 scoreboard players set players game_data 0
 scoreboard players set players game_data 5

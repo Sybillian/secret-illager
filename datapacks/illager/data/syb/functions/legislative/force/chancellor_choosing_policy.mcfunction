@@ -1,0 +1,2 @@
+execute if score v_policies_inhand game_data matches 1.. run function syb:legislative/trigger/play_villager_policy
+execute unless score v_policies_inhand game_data matches 1.. run function syb:legislative/trigger/play_illager_policy

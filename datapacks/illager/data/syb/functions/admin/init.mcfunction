@@ -52,6 +52,7 @@ scoreboard objectives add nom_vote dummy
 scoreboard objectives add role dummy
 scoreboard objectives add inv dummy
 scoreboard objectives add inv_changed dummy
+scoreboard objectives add term_limited dummy
 scoreboard objectives add display dummy {"translate": "syb.scoreboard.title","color":"dark_red","bold":"true"}
 scoreboard objectives setdisplay list
 scoreboard objectives setdisplay sidebar display

@@ -1,7 +1,7 @@
 execute as @a if entity @s[nbt={SelectedItem:{tag:{policy:0}}},scores={used_coas=1..}] run function syb:legislative/trigger/discard_villager_policy
 execute as @a if entity @s[nbt={SelectedItem:{tag:{policy:1}}},scores={used_coas=1..}] run function syb:legislative/trigger/discard_illager_policy
 
-execute if score phase_time game_data matches 0 run function syb:election/trigger/vote_finished
+execute if score phase_time game_data matches 0 run function syb:legislative/force/pres_discarding_policy
 scoreboard players remove phase_time game_data 1
 
 scoreboard players operation time_ticks math = phase_time game_data

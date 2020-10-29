@@ -1,7 +1,7 @@
 execute as @a if entity @s[nbt={SelectedItem:{tag:{veto_action:1}}},scores={used_coas=1..}] run function syb:legislative/veto/accept
 execute as @a if entity @s[nbt={SelectedItem:{tag:{veto_action:2}}},scores={used_coas=1..}] run function syb:legislative/veto/decline
 
-execute if score phase_time game_data matches 0 run function syb:election/trigger/vote_finished
+execute if score phase_time game_data matches 0 run function function syb:legislative/veto/accept
 scoreboard players remove phase_time game_data 1
 
 scoreboard players operation time_ticks math = phase_time game_data

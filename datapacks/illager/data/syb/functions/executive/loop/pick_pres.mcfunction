@@ -5,7 +5,7 @@ execute as @a[tag=pres] store success score @s inv_changed run data modify stora
 execute as @a[tag=pres] store success score @s inv_changed run kill @e[type=minecraft:item]
 execute as @a[tag=pres] if score @s inv_changed matches 1 run function syb:game/inv/heads
 
-execute if score time_seconds math matches 0 run function syb:executive/trigger/end/pick_pres
+execute if score time_seconds math matches 0 run function syb:executive/force/pick_pres
 scoreboard players remove phase_time game_data 1
 
 scoreboard players operation time_ticks math = phase_time game_data
