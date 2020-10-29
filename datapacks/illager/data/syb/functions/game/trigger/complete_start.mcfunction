@@ -73,5 +73,7 @@ execute store result bossbar syb:investigate max run scoreboard players get inve
 execute store result bossbar syb:pick_pres max run scoreboard players get pick_pres_dur settings
 execute store result bossbar syb:elim_player max run scoreboard players get elim_dur settings
 
+scoreboard objectives setdisplay sidebar display
+bossbar set syb:intro visible false
 scoreboard players set game_active game_data 1
 function syb:election/trigger/new_pres

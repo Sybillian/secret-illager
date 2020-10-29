@@ -1,5 +1,5 @@
 title @s times 10 50 10
-title @a subtitle {"translate":"syb.subtitle.illager_win","color":"yellow"}
+title @a subtitle {"translate":"syb.subtitle.end.illager_win","color":"yellow"}
 title @a[scores={role=1}] title {"translate":"syb.title.end.lose","color":"red"}
 title @a[scores={role=2..3}] title {"translate":"syb.title.end.win","color":"green"}
 

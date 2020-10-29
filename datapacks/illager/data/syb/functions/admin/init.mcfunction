@@ -55,7 +55,7 @@ scoreboard objectives add inv_changed dummy
 scoreboard objectives add term_limited dummy
 scoreboard objectives add display dummy {"translate": "syb.scoreboard.title","color":"dark_red","bold":"true"}
 scoreboard objectives setdisplay list
-scoreboard objectives setdisplay sidebar display
+scoreboard objectives setdisplay sidebar
 
 scoreboard players set 100000 math 100000
 scoreboard players set 10000 math 10000
@@ -241,6 +241,11 @@ bossbar add syb:veto {"translate":"syb.bossbar.veto","color":"green"}
 bossbar set syb:veto color green
 bossbar set syb:veto visible false
 execute store result bossbar syb:veto max run scoreboard players get veto_dur settings
+
+bossbar add syb:intro {"translate":"syb.bossbar.intro"}
+bossbar set syb:intro color green
+bossbar set syb:intro visible false
+bossbar set syb:intro max 10
 
 ## DEV STUFF
 execute if score dev_mode game_data matches 1 run function syb:admin/dev_mode
