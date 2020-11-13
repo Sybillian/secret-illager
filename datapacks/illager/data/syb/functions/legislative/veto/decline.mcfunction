@@ -2,6 +2,7 @@ tellraw @a {"translate":"syb.chat.decline_veto","with":[{"translate":"syb.prefix
 
 scoreboard players set attempted_veto game_data 1
 scoreboard players set action game_data 0
+clear @a minecraft:totem_of_undying
 
 scoreboard players operation phase_time game_data = veto_dur settings
 bossbar set syb:veto players @a

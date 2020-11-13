@@ -1,5 +1,5 @@
 tellraw @a[tag=!pres] {"translate":"syb.chat.scry.draw.others","with":[{"translate":"syb.prefix.game","color":"green","bold":"true"},{"selector":"@a[tag=pres]"}]}
-tellraw @a[tag=pres] {"translate":"syb.chat.scry.draw.pres","with":[{"translate":"syb.prefix.whisper","bold":"true","color":"dark_gray"}]}
+tellraw @a[tag=pres] {"translate":"syb.chat.scry.draw.pres","with":[{"translate":"syb.prefix.whisper","bold":"true","color":"dark_gray"},{"keybind":"key.use"}]}
 scoreboard players operation phase_time game_data = scry_dur settings
 execute store result bossbar syb:scry max run scoreboard players get scry_dur settings
 bossbar set syb:scry players @a

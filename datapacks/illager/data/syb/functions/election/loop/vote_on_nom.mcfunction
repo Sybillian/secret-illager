@@ -6,6 +6,7 @@ execute as @a[scores={nom_vote=0..1},tag=!locked] unless entity @s[nbt={Inventor
 execute as @a[scores={nom_vote=0..1},tag=!locked] unless entity @s[nbt={Inventory:[{Slot:3b,tag:{custom_item:"vote_yes"}},{Slot:5b,tag:{custom_item:"vote_no"}},{Slot:8b,tag:{custom_item:"lock_vote"}}]}] run function syb:game/inv/vote_on_nom_lock
 
 execute if score phase_time game_data matches 0 run function syb:election/trigger/vote_finished
+execute unless entity @a[tag=!locked] run function syb:election/trigger/vote_finished
 scoreboard players remove phase_time game_data 1
 
 scoreboard players operation time_ticks math = phase_time game_data

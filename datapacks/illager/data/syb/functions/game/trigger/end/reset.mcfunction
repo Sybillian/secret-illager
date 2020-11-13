@@ -19,6 +19,7 @@ scoreboard players set yes_votes game_data 0
 scoreboard players set v_policies_inhand game_data 0
 scoreboard players set i_policies_inhand game_data 0
 scoreboard players set current_pres game_data 0
+scoreboard players set current_chancellor game_data 0
 scoreboard players set villagers game_data 0
 scoreboard players set illagers game_data 0
 scoreboard players set start_countdown game_data 10
