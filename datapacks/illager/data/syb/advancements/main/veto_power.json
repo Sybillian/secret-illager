@@ -1,21 +1,21 @@
 {
   "display": {
     "title": [
-      {"translate": "syb.advancement.name.villagers"}
+      {"translate": "syb.advancement.name.veto_power"}
     ],
     "description": [
-      {"translate": "syb.advancement.desc.villagers.1"}
+      {"translate": "syb.advancement.desc.veto_power"}
     ],
     "icon": {
-      "item": "minecraft:carrot_on_a_stick",
-      "nbt": "{CustomModelData:5}"
+      "item": "minecraft:totem_of_undying",
+      "nbt": "{CustomModelData:2}"
     },
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": false
   },
-  "parent": "syb:main/basics",
+  "parent": "syb:main/inactive_government",
   "criteria": {
     "firstjoin": {
       "trigger": "minecraft:tick"

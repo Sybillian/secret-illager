@@ -20,11 +20,6 @@ execute if data storage game:deck Cards[2].tag{policy:0} run replaceitem entity 
 execute if data storage game:deck Cards[2].tag{policy:0} run scoreboard players add v_policies_inhand game_data 1
 execute if data storage game:deck Cards[2].tag{policy:1} run scoreboard players add i_policies_inhand game_data 1
 
-data remove storage game:deck Cards[2]
-data remove storage game:deck Cards[1]
-data remove storage game:deck Cards[0]
-execute unless data storage game:deck Cards[2] run function syb:legislative/trigger/rebuild_deck
-
 tellraw @a[tag=!pres] {"translate":"syb.chat.draw_policies.others","color":"green","with":[{"translate":"syb.prefix.whisper","bold":"true","color":"dark_gray"},{"selector":"@a[tag=pres]"},{"selector":"@a[tag=chancellor]"}]}
 tellraw @a[tag=pres] {"translate":"syb.chat.draw_policies.pres","color":"green","with":[{"translate":"syb.prefix.whisper","bold":"true","color":"dark_gray"}]}
 

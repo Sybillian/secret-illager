@@ -1,21 +1,20 @@
 {
   "display": {
     "title": [
-      {"translate": "syb.advancement.name.villagers"}
+      {"translate": "syb.advancement.name.executive"}
     ],
     "description": [
-      {"translate": "syb.advancement.desc.villagers.1"}
+      {"translate": "syb.advancement.desc.executive"}
     ],
     "icon": {
-      "item": "minecraft:carrot_on_a_stick",
-      "nbt": "{CustomModelData:5}"
+      "item": "minecraft:paper"
     },
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": false
   },
-  "parent": "syb:main/basics",
+  "parent": "syb:main/legislative",
   "criteria": {
     "firstjoin": {
       "trigger": "minecraft:tick"

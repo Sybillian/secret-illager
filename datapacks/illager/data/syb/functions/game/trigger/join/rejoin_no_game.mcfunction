@@ -1,5 +1,5 @@
-tellraw @s[tag=playing] {"text":"Rejoined, no game active - was ingame."}
-tellraw @s[tag=!playing] {"text":"Rejoined, no game active - was NOT ingame."}
+tellraw @s[tag=playing] {"translate":"syb.chat.rejoin.game_ended"}
+tellraw @s[tag=!playing] {"translate":"syb.chat.rejoin.no_game"}
 effect clear @s minecraft:invisibility
 team join lobby @s
 tag @s remove pres

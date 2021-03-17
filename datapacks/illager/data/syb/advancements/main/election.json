@@ -1,14 +1,13 @@
 {
   "display": {
     "title": [
-      {"translate": "syb.advancement.name.villagers"}
+      {"translate": "syb.advancement.name.election"}
     ],
     "description": [
-      {"translate": "syb.advancement.desc.villagers.1"}
+      {"translate": "syb.advancement.desc.election"}
     ],
     "icon": {
-      "item": "minecraft:carrot_on_a_stick",
-      "nbt": "{CustomModelData:5}"
+      "item": "minecraft:paper"
     },
     "frame": "task",
     "show_toast": false,

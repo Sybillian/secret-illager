@@ -1,5 +1,5 @@
-tellraw @s[tag=playing] {"text":"Rejoined, no game active - was ingame."}
-tellraw @s[tag=!playing] {"text":"Rejoined, no game active - was NOT ingame."}
+tellraw @s[tag=playing] {"translate":"syb.chat.rejoin.midgame.was_ingame"}
+tellraw @s[tag=!playing] {"translate":"syb.chat.rejoin.midgame.wasnt_ingame"}
 
 tp @s 0 21 0
 clear @s

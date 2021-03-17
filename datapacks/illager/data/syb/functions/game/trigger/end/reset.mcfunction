@@ -36,6 +36,7 @@ scoreboard players reset * inv
 scoreboard objectives setdisplay sidebar
 team join lobby @a
 effect clear @a minecraft:invisibility
+clear @a
 tag @a remove pres
 tag @a remove chancellor
 tag @a remove nom_chancellor

@@ -1,6 +1,8 @@
 execute as @a if entity @s[nbt={SelectedItem:{tag:{policy:0}}},scores={used_coas=1..}] run function syb:legislative/trigger/discard_villager_policy
 execute as @a if entity @s[nbt={SelectedItem:{tag:{policy:1}}},scores={used_coas=1..}] run function syb:legislative/trigger/discard_illager_policy
 
+execute as @a[tag=pres] unless entity @s[nbt={Inventory:[{Slot:2b,id:"minecraft:totem_of_undying"},{Slot:4b,id:"minecraft:totem_of_undying"},{Slot:6b,id:"minecraft:totem_of_undying"}]}] run function syb:game/inv/pres_discarding_policy
+
 execute if score phase_time game_data matches 0 run function syb:legislative/force/pres_discarding_policy
 scoreboard players remove phase_time game_data 1
 

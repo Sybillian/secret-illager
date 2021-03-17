@@ -1,14 +1,14 @@
 {
   "display": {
     "title": [
-      {"translate": "syb.advancement.name.villagers"}
+      {"translate": "syb.advancement.name.inactive_government"}
     ],
     "description": [
-      {"translate": "syb.advancement.desc.villagers.1"}
+      {"translate": "syb.advancement.desc.inactive_government"}
     ],
     "icon": {
       "item": "minecraft:carrot_on_a_stick",
-      "nbt": "{CustomModelData:5}"
+      "nbt": "{CustomModelData:1}"
     },
     "frame": "task",
     "show_toast": false,

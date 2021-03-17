@@ -5,6 +5,7 @@ tellraw @a {"translate": "syb.chat.end.roles.arch_illager","color":"dark_red","w
 team join villager @a[scores={role=1}]
 team join illager @a[scores={role=2}]
 team join arch_illager @a[scores={role=3}]
+effect clear @a minecraft:invisibility
 effect give @a minecraft:glowing 5 0 true
 
 schedule function syb:game/trigger/end/reset 5s

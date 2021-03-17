@@ -2,6 +2,9 @@ execute as @a if entity @s[tag=!discarded,nbt={SelectedItem:{tag:{policy:0}}},sc
 execute as @a if entity @s[tag=!discarded,nbt={SelectedItem:{tag:{policy:1}}},scores={used_coas=1..}] run function syb:legislative/trigger/play_illager_policy
 execute as @a if entity @s[tag=!discarded,nbt={SelectedItem:{tag:{veto_action:0}}},scores={used_coas=1..}] run function syb:legislative/veto/req_veto
 
+execute if score policies_i game_data matches ..4 as @a[tag=chancellor] unless entity @s[nbt={Inventory:[{Slot:3b,id:"minecraft:totem_of_undying"},{Slot:5b,id:"minecraft:totem_of_undying"}]}] run function syb:game/inv/chancellor_choosing_policy
+execute if score policies_i game_data matches 5.. unless score attempted_veto game_data matches 1 as @a[tag=chancellor] unless entity @s[nbt={Inventory:[{Slot:3b,id:"minecraft:totem_of_undying"},{Slot:5b,id:"minecraft:totem_of_undying"},{Slot:8b,id:"minecraft:totem_of_undying"}]}] run function syb:game/inv/chancellor_choosing_policy
+
 execute if score phase_time game_data matches 0 run function syb:legislative/force/chancellor_choosing_policy
 scoreboard players remove phase_time game_data 1
 
